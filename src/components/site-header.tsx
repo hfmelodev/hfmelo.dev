@@ -26,11 +26,11 @@ function ThemeToggle() {
     >
       <SunIcon
         weight="regular"
-        className="size-[18px] rotate-0 scale-100 transition-transform duration-500 ease-fluid dark:-rotate-90 dark:scale-0"
+        className="size-4.5 rotate-0 scale-100 transition-transform duration-500 ease-fluid dark:-rotate-90 dark:scale-0"
       />
       <MoonIcon
         weight="regular"
-        className="absolute size-[18px] rotate-90 scale-0 transition-transform duration-500 ease-fluid dark:rotate-0 dark:scale-100"
+        className="absolute size-4.5 rotate-90 scale-0 transition-transform duration-500 ease-fluid dark:rotate-0 dark:scale-100"
       />
     </button>
   )
@@ -89,13 +89,13 @@ export function SiteHeader() {
               <span
                 className={cn(
                   'absolute h-px w-4 bg-fg transition-transform duration-500 ease-fluid',
-                  open ? 'rotate-45' : '-translate-y-[3px]'
+                  open ? 'rotate-45' : '-translate-y-0.75'
                 )}
               />
               <span
                 className={cn(
                   'absolute h-px w-4 bg-fg transition-transform duration-500 ease-fluid',
-                  open ? '-rotate-45' : 'translate-y-[3px]'
+                  open ? '-rotate-45' : 'translate-y-0.75'
                 )}
               />
             </button>

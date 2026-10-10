@@ -16,15 +16,15 @@ export function Experience() {
         </div>
 
         <ol className="relative md:col-span-8">
-          <span aria-hidden="true" className="absolute top-2 bottom-2 left-[5px] w-px bg-line" />
+          <span aria-hidden="true" className="absolute top-2 bottom-2 left-1.25 w-px bg-line" />
           {experience.map((job, i) => (
             <Reveal as="li" key={`${job.role}-${job.period}`} delay={i * 0.04} className="relative pb-12 pl-10 last:pb-0">
               <span
                 aria-hidden="true"
                 className={
                   i === 0
-                    ? 'absolute top-1.5 left-0 size-[11px] rounded-full bg-accent ring-4 ring-accent/20'
-                    : 'absolute top-1.5 left-0 size-[11px] rounded-full bg-surface-2 ring-1 ring-fg/20'
+                    ? 'absolute top-1.5 left-0 size-2.75 rounded-full bg-accent ring-4 ring-accent/20'
+                    : 'absolute top-1.5 left-0 size-2.75 rounded-full bg-surface-2 ring-1 ring-fg/20'
                 }
               />
               <p className="font-mono text-muted text-xs">{job.period}</p>

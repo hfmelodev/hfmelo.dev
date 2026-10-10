@@ -44,7 +44,7 @@ export function Hero() {
         </div>
 
         <Reveal delay={0.2} className="flex justify-center md:col-span-5 md:justify-end">
-          <div className="relative aspect-square w-full max-w-[360px] sm:max-w-[420px]">
+          <div className="relative aspect-square w-full max-w-90 sm:max-w-105">
             <svg
               viewBox="0 0 200 200"
               aria-hidden="true"

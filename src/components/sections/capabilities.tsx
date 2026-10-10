@@ -36,7 +36,7 @@ export function Capabilities() {
             Design de interface, design systems e front-end com React e Next.js. Cuido de hierarquia, acessibilidade, tema claro e
             escuro e performance, sem perder o detalhe do pixel.
           </p>
-          <div className="relative mt-8 -mr-9 -mb-9 min-h-[260px] flex-1 overflow-hidden rounded-tl-2xl shadow-soft ring-1 ring-line md:-mr-9 md:-mb-9">
+          <div className="relative mt-8 -mr-9 -mb-9 min-h-65 flex-1 overflow-hidden rounded-tl-2xl shadow-soft ring-1 ring-line md:-mr-9 md:-mb-9">
             <Image
               src="/projects/indicadores-dashboard.webp"
               alt="Detalhe da interface do Indicadores OAB-MA"
@@ -69,7 +69,7 @@ export function Capabilities() {
         </Cell>
 
         <Cell
-          className="bg-[radial-gradient(circle_at_1px_1px,var(--line)_1px,transparent_0)] bg-surface-2 [background-size:18px_18px] lg:col-span-6"
+          className="bg-[radial-gradient(circle_at_1px_1px,var(--line)_1px,transparent_0)] bg-size-[18px_18px] bg-surface-2 lg:col-span-6"
           delay={0.06}
         >
           <CellTitle icon={<CloudIcon className="size-5" />}>Infra e DevOps</CellTitle>

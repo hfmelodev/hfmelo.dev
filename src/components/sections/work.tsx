@@ -75,8 +75,8 @@ function Meta({ project, large }: { project: Project; large?: boolean }) {
 /** Casca externa + núcleo interno (double-bezel). */
 function Shell({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <article className={cn('group rounded-[1.75rem] bg-fg/[0.025] p-1.5 ring-1 ring-line', className)}>
-      <div className="flex h-full flex-col overflow-hidden rounded-[calc(1.75rem-0.375rem)] bg-surface shadow-[inset_0_1px_0_oklch(1_0_0/0.06)]">
+    <article className={cn('group rounded-[1.75rem] bg-fg/2.5 p-1.5 ring-1 ring-line', className)}>
+      <div className="flex h-full flex-col overflow-hidden rounded-[1.375rem] bg-surface shadow-[inset_0_1px_0_oklch(1_0_0/0.06)]">
         {children}
       </div>
     </article>
@@ -100,7 +100,7 @@ export function Work() {
               <Shot
                 project={pje}
                 sizes="(min-width: 1024px) 760px, 100vw"
-                className="h-[260px] sm:h-[360px] lg:col-span-7 lg:h-auto lg:min-h-[480px]"
+                className="h-65 sm:h-90 lg:col-span-7 lg:h-auto lg:min-h-120"
               />
               <div className="lg:col-span-5">
                 <Meta project={pje} large />
@@ -111,28 +111,28 @@ export function Work() {
 
         <Reveal className="lg:col-span-7">
           <Shell className="h-full">
-            <Shot project={atende} sizes="(min-width: 1024px) 720px, 100vw" className="h-[240px] md:h-[320px]" />
+            <Shot project={atende} sizes="(min-width: 1024px) 720px, 100vw" className="h-60 md:h-80" />
             <Meta project={atende} />
           </Shell>
         </Reveal>
 
         <Reveal className="lg:col-span-5" delay={0.08}>
           <Shell className="h-full">
-            <Shot project={indicadores} sizes="(min-width: 1024px) 520px, 100vw" className="h-[240px] md:h-[320px]" />
+            <Shot project={indicadores} sizes="(min-width: 1024px) 520px, 100vw" className="h-60 md:h-80" />
             <Meta project={indicadores} />
           </Shell>
         </Reveal>
 
         <Reveal className="lg:col-span-5">
           <Shell className="h-full">
-            <Shot project={labcode} sizes="(min-width: 1024px) 520px, 100vw" className="h-[240px] md:h-[320px]" />
+            <Shot project={labcode} sizes="(min-width: 1024px) 520px, 100vw" className="h-60 md:h-80" />
             <Meta project={labcode} />
           </Shell>
         </Reveal>
 
         <Reveal className="lg:col-span-7" delay={0.08}>
           <Shell className="h-full">
-            <Shot project={salalivre} sizes="(min-width: 1024px) 720px, 100vw" className="h-[240px] md:h-[320px]" />
+            <Shot project={salalivre} sizes="(min-width: 1024px) 720px, 100vw" className="h-60 md:h-80" />
             <Meta project={salalivre} />
           </Shell>
         </Reveal>
@@ -143,7 +143,7 @@ export function Work() {
               <Shot
                 project={descontolegal}
                 sizes="(min-width: 1024px) 760px, 100vw"
-                className="h-[260px] sm:h-[360px] lg:order-2 lg:col-span-7 lg:h-auto lg:min-h-[480px]"
+                className="h-65 sm:h-90 lg:order-2 lg:col-span-7 lg:h-auto lg:min-h-120"
               />
               <div className="lg:order-1 lg:col-span-5">
                 <Meta project={descontolegal} large />
@@ -154,14 +154,14 @@ export function Work() {
 
         <Reveal className="lg:col-span-7">
           <Shell className="h-full">
-            <Shot project={training} sizes="(min-width: 1024px) 720px, 100vw" className="h-[240px] md:h-[320px]" />
+            <Shot project={training} sizes="(min-width: 1024px) 720px, 100vw" className="h-60 md:h-80" />
             <Meta project={training} />
           </Shell>
         </Reveal>
 
         <Reveal className="lg:col-span-5" delay={0.08}>
           <Shell className="h-full">
-            <Shot project={qrcode} sizes="(min-width: 1024px) 520px, 100vw" className="h-[240px] md:h-[320px]" />
+            <Shot project={qrcode} sizes="(min-width: 1024px) 520px, 100vw" className="h-60 md:h-80" />
             <Meta project={qrcode} />
           </Shell>
         </Reveal>

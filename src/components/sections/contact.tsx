@@ -14,7 +14,7 @@ const channels = [
 export function Contact() {
   return (
     <section id="contato" className="mx-auto w-full max-w-7xl px-4 py-24 md:px-8 md:py-32">
-      <div className="rounded-[2rem] bg-fg/[0.025] p-1.5 ring-1 ring-line">
+      <div className="rounded-4xl bg-fg/2.5 p-1.5 ring-1 ring-line">
         <div className="rounded-[calc(2rem-0.375rem)] bg-surface px-6 py-16 text-center md:px-12 md:py-28">
           <Reveal>
             <p className="inline-flex rounded-full border border-line px-3 py-1 font-medium text-[11px] text-muted uppercase tracking-[0.2em]">
@@ -42,7 +42,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-muted text-sm transition-colors duration-300 hover:bg-fg/5 hover:text-fg"
               >
-                <Icon className="size-[18px]" />
+                <Icon className="size-4.5" />
                 {label}
               </a>
             ))}
