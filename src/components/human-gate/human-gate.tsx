@@ -237,7 +237,7 @@ export function HumanGate() {
       </div>
 
       <div className="mx-auto flex min-h-full w-full max-w-xl flex-col justify-center px-4 pt-24 pb-12">
-        <div aria-live="polite" className="min-h-[7.5rem] sm:min-h-[8.5rem]">
+        <div aria-live="polite" className="min-h-30 sm:min-h-34">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={headline.title}
@@ -259,7 +259,7 @@ export function HumanGate() {
 
         <div className="mt-8 rounded-[28px] bg-surface p-1.5 shadow-soft ring-1 ring-line">
           <div className="rounded-[22px] bg-surface-2/50 px-5 py-5 font-mono text-[13px] leading-[1.6] sm:px-6">
-            <ol aria-label="Diagnóstico de humanidade" className="flex min-h-[15rem] flex-col gap-1.5">
+            <ol aria-label="Diagnóstico de humanidade" className="flex min-h-60 flex-col gap-1.5">
               {entries.map((entry, index) => (
                 <Line key={index} tone={entry.result?.tone ?? 'pending'}>
                   {entry.result?.text ?? `${entry.pending}…`}
