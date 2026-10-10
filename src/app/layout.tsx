@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { gateScript } from '@/components/human-gate/gate-script'
+import { HumanGate } from '@/components/human-gate/human-gate'
+import { InlineScript } from '@/components/inline-script'
 import { Providers } from '@/components/providers'
 import { profile } from '@/data/profile'
 import './globals.css'
@@ -49,7 +52,11 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
-        <Providers>{children}</Providers>
+        <InlineScript html={gateScript} />
+        <Providers>
+          <HumanGate />
+          {children}
+        </Providers>
       </body>
     </html>
   )

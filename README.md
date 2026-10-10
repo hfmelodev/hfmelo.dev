@@ -18,7 +18,7 @@ Portfolio pessoal de **Hilquias Ferreira Melo**, desenvolvedor FullStack em São
 
 Site de apresentação com os sistemas que desenhei e desenvolvi de ponta a ponta, da interface à API e à infraestrutura. Reúne projetos em produção para a OAB Maranhão e a CAAMA, produtos próprios, trajetória profissional, formação e contato.
 
-O site é uma página única, prerenderizada de forma estática e sem backend. Todo o conteúdo fica em arquivos de dados tipados, o que torna simples incluir um projeto novo ou ajustar um texto sem mexer nos componentes.
+O site é uma página única, prerenderizada de forma estática. O único trecho de servidor é a validação do Cloudflare Turnstile no portão de entrada. Todo o conteúdo fica em arquivos de dados tipados, o que torna simples incluir um projeto novo ou ajustar um texto sem mexer nos componentes.
 
 ## Destaques técnicos
 
@@ -41,6 +41,7 @@ O site é uma página única, prerenderizada de forma estática e sem backend. T
 | Animação | Motion |
 | Ícones | Phosphor Icons, Simple Icons |
 | Tema | next-themes |
+| Segurança | Cloudflare Turnstile, Zod (validação das variáveis de ambiente) |
 | Qualidade | Biome (lint, formatação e ordenação de classes) |
 | Gerenciador | pnpm |
 
@@ -49,9 +50,17 @@ O site é uma página única, prerenderizada de forma estática e sem backend. T
 Pré-requisitos: Node.js 20.9 ou superior e pnpm.
 
 ```bash
-pnpm install   # instala as dependências
-pnpm dev       # http://localhost:3000
+pnpm install          # instala as dependências
+cp .env.example .env  # chaves de teste do Turnstile (sempre aprovam)
+pnpm dev              # http://localhost:3000
 ```
+
+As variáveis de ambiente são validadas com Zod em `src/env/` ao carregar o `next.config.ts`: se faltar alguma, o `dev` e o `build` param com a mensagem do que está faltando.
+
+| Variável | Onde é usada |
+| --- | --- |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Widget do Turnstile no navegador |
+| `TURNSTILE_SECRET_KEY` | Validação do token no servidor (Server Action) |
 
 | Script | O que faz |
 | --- | --- |
@@ -61,16 +70,29 @@ pnpm dev       # http://localhost:3000
 | `pnpm lint` | Verificação com Biome |
 | `pnpm format` | Formatação com Biome |
 
+## Portão "prove que você não é um robô"
+
+Na primeira visita, antes do site, aparece um "teste de Turing reverso": um diagnóstico em tom de piada que usa sinais do próprio navegador (horário, tema do sistema, mouse ou toque, `navigator.webdriver`) enquanto o Cloudflare Turnstile valida de verdade em segundo plano. Depois da aprovação, a confirmação fica no `localStorage` (`hfmelo:human-verified`) e o portão não aparece mais naquele navegador.
+
+- **Ninguém fica de fora**: se o Turnstile falhar, demorar mais de 10 s ou travar no desafio, a entrada é liberada com outra piada.
+- **SEO intacto**: o conteúdo continua no HTML. Crawlers, geradores de prévia (WhatsApp, LinkedIn) e quem está sem JavaScript não veem o portão.
+- **Sem flash**: um script inline marca o `<html>` antes do primeiro paint, e o CSS só mostra o portão com essa marca.
+- Para ver de novo, apague a chave `hfmelo:human-verified` no DevTools (Application → Local Storage) ou abra uma janela anônima.
+
+No painel do Turnstile, o widget precisa listar os domínios do site e `localhost`. Para quem é IA, existe ainda o `public/llms.txt`.
+
 ## Estrutura
 
 ```
 src/
   app/            layout, página, estilos globais, ícone e imagem Open Graph
   components/
+    human-gate/   portão de verificação (Turnstile, diagnóstico e script anti-flash)
     sections/     seções da página (hero, projetos, serviços, sobre, trajetória, contato)
     ui/           componentes reutilizáveis (botões, títulos de seção)
   data/           conteúdo do site: perfil, experiências, formação e projetos
-  lib/            utilitários
+  env/            variáveis de ambiente validadas com Zod (cliente e servidor)
+  lib/            utilitários e a Server Action que valida o Turnstile
   assets/         arquivos usados na geração da imagem Open Graph
 public/
   projects/       screenshots dos projetos (WebP)

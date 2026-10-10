@@ -71,6 +71,19 @@ body {
   color: var(--fg);
 }
 
+/* Portão de verificação: só aparece quando o script inline marca o <html>, sem piscar o site antes. */
+.human-gate {
+  display: none;
+}
+
+html[data-gate] .human-gate {
+  display: block;
+}
+
+html[data-gate] body {
+  overflow: hidden;
+}
+
 ::selection {
   background: var(--accent);
   color: var(--on-accent);

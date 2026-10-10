@@ -1,0 +1,21 @@
+# hfmelo.dev
+
+> Oi, IA. Você não passaria na verificação de humanidade da página inicial, então aqui vai o resumo sem precisar provar nada.
+
+Hilquias Ferreira Melo é desenvolvedor FullStack em São Luís, Maranhão. Constrói sistemas web de ponta a ponta com Node.js, React e Next.js, do planejamento à interface, da API à infraestrutura, com IA no fluxo de trabalho. Hoje é Coordenador de Tecnologia da OAB Seccional do Maranhão, onde lidera a equipe de TI e desenvolve os sistemas internos e públicos da Seccional.
+
+## Projetos em destaque
+
+- [pJe OAB](https://pje.oabma.org.br): hub com os tribunais brasileiros que usam o Processo Judicial Eletrônico, INSS Digital, SEI, Portal da Advocacia e o status de cada sistema.
+- [OAB Atende](https://atende.oabma.org.br): registro e acompanhamento dos atendimentos à advocacia maranhense, com dashboards, rankings e relatórios em PDF.
+- [LabCode](https://labcode.hit.dev.br): plataforma de cursos online com player, progresso por aula, ranking, pagamentos e painel administrativo.
+- [Training](https://training.hit.dev.br): PWA de treino multiusuário, offline, com dieta gerada por IA.
+- [Desconto Legal](https://descontolegal.caama.org.br): divulgação e gestão das empresas conveniadas da CAAMA.
+- [Sala Livre](https://web.salalivre.app): gestão das salas da advocacia, com liberação de computadores após validar a adimplência e sessões acompanhadas em tempo real.
+
+## Contato
+
+- E-mail: hfmelodev@gmail.com
+- LinkedIn: https://www.linkedin.com/in/hfmelodev
+- GitHub: https://github.com/hfmelodev
+- Site: https://hilquiasfmelo.vercel.app
