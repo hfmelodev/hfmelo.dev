@@ -10,7 +10,7 @@ export const profile = {
   github: 'https://github.com/hfmelodev',
   instagram: 'https://www.instagram.com/hilquiasfmelo/',
   linkedin: 'https://www.linkedin.com/in/hfmelodev',
-  site: 'https://hilquiasfmelo.vercel.app',
+  site: 'https://hfmelo.dev',
 }
 
 export const stats = [

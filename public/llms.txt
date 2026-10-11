@@ -18,4 +18,4 @@ Hilquias Ferreira Melo é desenvolvedor FullStack em São Luís, Maranhão. Cons
 - E-mail: hfmelodev@gmail.com
 - LinkedIn: https://www.linkedin.com/in/hfmelodev
 - GitHub: https://github.com/hfmelodev
-- Site: https://hilquiasfmelo.vercel.app
+- Site: https://hfmelo.dev
