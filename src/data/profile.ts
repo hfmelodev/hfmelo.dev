@@ -1,3 +1,7 @@
+/** Mensagem que já vem preenchida no WhatsApp, para identificar quem chegou pelo site. */
+const whatsappMessage =
+  'Olá, Hilquias! Conheci seu trabalho pelo portfólio hfmelo.dev e gostaria de conversar sobre um projeto. Podemos falar?'
+
 export const profile = {
   name: 'hfmelo.dev',
   fullName: 'Hilquias Ferreira Melo',
@@ -6,7 +10,7 @@ export const profile = {
   location: 'São Luís, Maranhão',
   email: 'hfmelodev@gmail.com',
   phone: '(98) 98329-1170',
-  whatsapp: 'https://wa.me/5598983291170',
+  whatsapp: `https://wa.me/5598983291170?text=${encodeURIComponent(whatsappMessage)}`,
   github: 'https://github.com/hfmelodev',
   instagram: 'https://www.instagram.com/hilquiasfmelo/',
   linkedin: 'https://www.linkedin.com/in/hfmelodev',
