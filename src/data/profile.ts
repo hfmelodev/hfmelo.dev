@@ -8,7 +8,7 @@ export const profile = {
   shortName: 'Hilquias',
   role: 'Desenvolvedor FullStack',
   location: 'São Luís, Maranhão',
-  email: 'hfmelodev@gmail.com',
+  email: 'contato@hfmelo.dev',
   phone: '(98) 98329-1170',
   whatsapp: `https://wa.me/5598983291170?text=${encodeURIComponent(whatsappMessage)}`,
   github: 'https://github.com/hfmelodev',

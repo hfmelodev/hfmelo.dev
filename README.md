@@ -110,7 +110,7 @@ Para incluir um projeto em destaque, adicione o screenshot em `public/projects/`
 
 ## Contato
 
-- E-mail: [hfmelodev@gmail.com](mailto:hfmelodev@gmail.com)
+- E-mail: [contato@hfmelo.dev](mailto:contato@hfmelo.dev)
 - LinkedIn: [linkedin.com/in/hfmelodev](https://www.linkedin.com/in/hfmelodev)
 - Instagram: [@hilquiasfmelo](https://www.instagram.com/hilquiasfmelo/)
 - GitHub: [@hfmelodev](https://github.com/hfmelodev)
